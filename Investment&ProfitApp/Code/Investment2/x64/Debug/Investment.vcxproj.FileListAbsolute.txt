@@ -1,0 +1,2 @@
+D:\Catalina\AD\Investment\x64\Debug\Investment.exe
+D:\Catalina\AD\Investment2\x64\Debug\Investment.exe

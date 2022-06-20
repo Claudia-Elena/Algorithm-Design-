@@ -1,0 +1,177 @@
+\documentclass{article}
+%% \usepackage{times}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[table]{xcolor}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{algorithm}
+\usepackage{amsmath}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\hypersetup{colorlinks=true}
+\graphicspath{ {images/} }
+\huge
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{CLAUDIA-ELENA CIONTU} % controls the left corner of the header
+\chead{} % controls the center of the header
+\rhead{\textit{Algorithm Design}} % controls the right corner of the header
+\lfoot{} % controls the left corner of the footer
+\cfoot{} % controls the center of the footer
+\rfoot{Page~\thepage} % controls the right corner of the footer
+\renewcommand{\headrulewidth}{0.8pt}
+\renewcommand{\footrulewidth}{0.8pt}
+\begin{document}
+\thispagestyle{plain}% Removes the header from the first page. Change plain to empty to remove the numbering entirely.
+
+
+
+
+\begin{center}
+\Large
+\textcolor{BlueViolet}{{University of Craiova,\ Faculty of Automation, Computers and Electronics}}\\
+    \vspace{7mm}
+     \end{center} 
+    \begin{center}
+          
+    \textbf{\includegraphics[scale=0.5]{logo-ace.jpeg}}
+\end{center}
+% top matter
+
+\title{\textbf{\textit{Investment}}}
+
+\vspace{1em}
+\LARGE
+\textbf{\textcolor{MidnightBlue}{{  Title homework}}}: Investment
+
+\LARGE
+\vspace{1em}
+\textbf{\textcolor{MidnightBlue}{{Name}}}:Ciontu Claudia-Elena
+
+\LARGE
+\vspace{1em}
+\textbf{\textcolor{MidnightBlue}{{Specialty}}}: Computers and Information Technology
+
+
+
+
+
+
+
+
+% abstract
+\newpage
+\renewcommand*\contentsname{\centering \textcolor{blue}{{ Contents}}\\
+\vspace{1cm} } 
+\large \tableofcontents
+\newpage
+\section{\bfseries\scshape\textcolor{BlueViolet}{Problems statement}}
+Suppose you are an investment agent and you have capital of value C. There are n offers available for investment to choose from. For each offer i there are ai available shares of value vi, which can bring you an estimated profit pi for each share acquired. You are required to determine the investment that can bring you the maximum estimated return. Two different algorithms will be implemented.
+
+
+\subsection{\textcolor{Periwinkle}{Proposed algorithms}}
+\subsubsection{\textcolor{Periwinkle}{Bubble Sort}}
+\begin{center}
+    \textbf{\includegraphics[scale=0.8]{imageBubble.png}}
+\end{center}
+\subsubsection{\textcolor{Periwinkle}{Swap}}
+\begin{center}
+    \textbf{\includegraphics[scale=0.8]{image.png}}
+\end{center}
+
+\subsubsection{\textcolor{Periwinkle}{Insertion Sort}}
+\begin{center}
+    \textbf{\includegraphics[scale=0.8]{imageInsertion.png}}
+\end{center}
+
+\subsection{\textcolor{Periwinkle}{Indication}}
+We need to understand the following things about our problem:\\
+---In order to reach the maximum profit, it is necessary to sort all our options down by profit;\\
+--- We must also calculate the shares by multiplying the shares a[i] by the value v[i] it has;\\
+--- We must be careful that the value obtained by calculating the cost is not our cost that we already have;\\
+--- And let’s not forget that we don’t need to buy all the shares presented, but only a part of them if we have the necessary cost.\\
+
+\section{\textcolor{BlueViolet}{App Scheme.}}\label{sec_tr}
+  \begin{center}
+    \textbf{\includegraphics[scale=0.7]{SchemaAD.jpg}}
+\end{center}
+\subsubsection{\textcolor{Periwinkle}{main.c}}
+\textcolor{Mulberry}{main.c} este  fisierul de plecare al aplicației 
+
+In Main  :
+\begin{itemize}
+\item \textcolor{Orchid}{C} - our capital of value
+\item \textcolor{Orchid}{n} - number of offers
+\item \textcolor{Orchid}{a[i]} - available shares
+\item \textcolor{Orchid}{v[i]}- value of the available shares
+\item \textcolor{Orchid}{p[i]} -  estimated profit per share
+\end{itemize}
+
+\subsubsection{\textcolor{Periwinkle}{investment in.txt}}
+\textcolor{BrickRed}{investment in.txt} the file where we will read our variables
+\begin{itemize}
+\item \textcolor{Bittersweet}{the first line is our cost} 
+\item  \textcolor{Bittersweet}{the second line is the number of offers} 
+\item  \textcolor{Bittersweet}{the following lines represent their share number, values and profits in that order} 
+
+\end{itemize}
+\subsubsection{\textcolor{Periwinkle}{investment out.txt}}
+\textcolor{ForestGreen}{investment out.txt} this file will show the results of our compilations in the following order:
+\begin{itemize}
+\item  \textcolor{LimeGreen}{first line will display your Capital value}
+\item \textcolor{LimeGreen}{second line will display the number of offers} 
+\item \textcolor{LimeGreen}{For each shares will be displayed the number available shares , Each shares value and Each shares profit: }
+\item \textcolor{LimeGreen}{your Sorting Time} 
+\item \textcolor{LimeGreen}{Sorting profits, value and shares} 
+\item \textcolor{LimeGreen}{the cost that we still have for first part of app}
+\item \textcolor{LimeGreen}{the profit that we win in the first part }
+\item \textcolor{LimeGreen}{the cost that we still have after the first part of app} 
+\item \textcolor{LimeGreen}{the Final profit}
+\end{itemize}
+
+
+\section{\bfseries\scshape\textcolor{BlueViolet}{Understanding the App}}
+After sorting according to profit, in the first part of the application, with the help of a forum to browse each offer we check if we buy the shares, we get the money, as long as our vote is higher than 0 and higher than the result of multiplying the shares by their value, then we continue to buy.\\
+In the second part of the application, if our cost is still higher than 0, but we can’t buy all the shares, then we check if we can buy the shares partially.
+in the end, they will show us the cost remaining after the first part and the profit earned, followed by the results that went through the second part of our application
+
+\section{\bfseries\scshape\textcolor{BlueViolet}{Result}}
+We will read 2 sets of data for each sort algorithm to see the diferences
+
+\begin{center}
+    \textbf{\includegraphics[scale=0.8]{inv1IN.jpg}}
+\end{center}S
+\begin{center}
+    \textbf{\includegraphics[scale=0.8]{inv3IN.jpg}}
+\end{center}
+\subsection{\textcolor{CadetBlue}{For Bubble Sort}}
+\begin{center}
+    \textbf{\includegraphics[scale=0.8]{Met11.jpg}}
+\end{center}
+\begin{center}
+    \textbf{\includegraphics[scale=1.0]{Met13.jpg}}
+\end{center}
+\subsection{\textcolor{CadetBlue}{For Insertion Sort}}
+\begin{center}
+    \textbf{\includegraphics[scale=0.8]{Met21.jpg}}
+\end{center}
+\begin{center}
+    \textbf{\includegraphics[scale=1.0]{Met23.jpg}}
+\end{center}
+In the results you can see that the time is sorted, although the number or dates of offers are the same.\\
+As we can see, the bubble sorting algorithm is more efficient than the insertion sort algorithm
+
+\section{\textcolor{BlueViolet}{References}}\label{sec_ed}
+\url{https://www.overleaf.com/project}\\\\
+\url{https://www.geeksforgeeks.org/c-program-for-bubble-sort/}\\\\
+\url{https://www.geeksforgeeks.org/c-program-for-insertion-sort/}\\\\
+\url{https://www.educba.com/bubble-sort-in-data-structure/}\\\\
+\url{https://stackoverflow.com/questions/32221015/c-running-time-in-milliseconds}\\\\
+\url{https://www.simplilearn.com/tutorials/data-structure-tutorial/bubble-sort-algorithm}\\\\
+\url{https://shantoroy.com/latex/how-to-write-algorithm-in-latex/}\\\\
+\end{document}

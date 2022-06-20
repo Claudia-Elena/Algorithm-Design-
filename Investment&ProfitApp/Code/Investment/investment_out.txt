@@ -1,0 +1,71 @@
+
+   your Capital value:  100
+   the number of offers: 20 
+ Enter the number available shares: 5
+ Each shares have the value : 3
+ Each shares have the profit :  4
+ Enter the number available shares: 2
+ Each shares have the value : 3
+ Each shares have the profit :  4
+ Enter the number available shares: 2
+ Each shares have the value : 6
+ Each shares have the profit :  3
+ Enter the number available shares: 2
+ Each shares have the value : 3
+ Each shares have the profit :  8
+ Enter the number available shares: 9
+ Each shares have the value : 7
+ Each shares have the profit :  4
+ Enter the number available shares: 8
+ Each shares have the value : 7
+ Each shares have the profit :  4
+ Enter the number available shares: 4
+ Each shares have the value : 11
+ Each shares have the profit :  9
+ Enter the number available shares: 7
+ Each shares have the value : 5
+ Each shares have the profit :  90
+ Enter the number available shares: 6
+ Each shares have the value : 7
+ Each shares have the profit :  9
+ Enter the number available shares: 23
+ Each shares have the value : 4
+ Each shares have the profit :  1
+ Enter the number available shares: 5
+ Each shares have the value : 99
+ Each shares have the profit :  4
+ Enter the number available shares: 2
+ Each shares have the value : 3
+ Each shares have the profit :  4
+ Enter the number available shares: 2
+ Each shares have the value : 6
+ Each shares have the profit :  3
+ Enter the number available shares: 2
+ Each shares have the value : 3
+ Each shares have the profit :  8
+ Enter the number available shares: 9
+ Each shares have the value : 7
+ Each shares have the profit :  55
+ Enter the number available shares: 8
+ Each shares have the value : 7
+ Each shares have the profit :  4
+ Enter the number available shares: 4
+ Each shares have the value : 11
+ Each shares have the profit :  99
+ Enter the number available shares: 7
+ Each shares have the value : 5
+ Each shares have the profit :  90
+ Enter the number available shares: 6
+ Each shares have the value : 7
+ Each shares have the profit :  9
+ Enter the number available shares: 23
+ Each shares have the value : 4
+ Each shares have the profit :  1
+ Bubble Sorting Time: 144.000000 
+ number available shares:   4  7  7  9  4  6  6  2  2  5  2  9  8  5  2  8  2  2  23  23 
+value of the shares:   11  5  5  7  11  7  7  3  3  3  3  7  7  99  3  7  6  6  4  4 
+profit of the shares:   99  90  90  55  9  9  9  8  8  4  4  4  4  4  4  4  3  3  1  1 
+ We still have  21  money 
+ First profit is  1026   
+ We still have  0  money 
+ Final profit is  1312   
